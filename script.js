@@ -1,7 +1,6 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
-    // الحصول على البيانات المدخلة
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
