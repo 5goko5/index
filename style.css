@@ -1,89 +1,103 @@
-/* استيراد خط مشابه لتيك توك */
-@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;400;600&display=swap');
+/* استخدام خط يشبه TikTok */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* ضبط التصميم العام للصفحة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* خلفية تشبه TikTok */
 body {
     background-color: #000;
-    font-family: 'Proxima Nova', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-/* تصميم الحاوية */
+/* حاوية تسجيل الدخول */
 .login-container {
-    background-color: #161616;
-    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
     text-align: center;
-    width: 380px;
-}
-
-/* تصميم العنوان */
-.login-container h2 {
+    width: 320px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
 }
 
-/* تصميم المدخلات لتكون مطابقة لتيك توك */
-.input-group {
-    margin-bottom: 1.2rem;
-    text-align: left;
+/* شعار يشبه تيك توك */
+.tiktok-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
     position: relative;
 }
-.input-group label {
-    display: none;
-}
-.input-group input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 4px;
-    border: 1px solid #3a3a3a;
-    background-color: #262626;
-    color: #fff;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-.input-group input:focus {
-    border-color: #fe2c55;
-}
-.input-group input::placeholder {
-    color: #aaa;
-    font-size: 0.95rem;
+
+.tiktok-logo::before {
+    content: "TikTok";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: #ff0050;
+    z-index: -1;
 }
 
-/* تصميم زر تسجيل الدخول */
-.login-btn {
+/* مربعات الإدخال */
+input {
     width: 100%;
-    background-color: #fe2c55;
-    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
     border: none;
-    padding: 14px;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.login-btn:hover {
-    background-color: #e60045;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s;
 }
 
-/* رابط نسيان كلمة المرور والتسجيل */
-.extra-links {
-    margin-top: 1.2rem;
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
-.extra-links a {
-    color: #fe2c55;
+
+/* تأثير عند الضغط */
+input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* زر تسجيل الدخول يشبه زر TikTok */
+button {
+    width: 100%;
+    background: linear-gradient(45deg, #ff0050, #ff5900);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff5900, #ff0050);
+    transform: scale(1.05);
+}
+
+/* رابط التسجيل */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #ff0050;
     text-decoration: none;
-    font-size: 1rem;
 }
-.extra-links a:hover {
+
+.register-link a:hover {
     text-decoration: underline;
 }
