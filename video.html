@@ -3,12 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الفيديو</title>
+    <title>فيديو - TikTok</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>مرحبًا بك!</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/L8XbI9aJOXk" 
-        frameborder="0" allowfullscreen>
-    </iframe>
+
+    <!-- حاوية الفيديو -->
+    <div class="video-container">
+        <!-- فيديو تيك توك -->
+        <video class="tiktok-video" controls autoplay>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+
+        <!-- معلومات الفيديو -->
+        <div class="video-info">
+            <div class="user-info">
+                <img src="https://via.placeholder.com/50" alt="User" class="user-avatar">
+                <div class="user-details">
+                    <strong class="user-name">اسم المستخدم</strong>
+                    <p class="video-description">وصف الفيديو هنا...</p>
+                </div>
+            </div>
+
+            <div class="video-interactions">
+                <button class="like-button">
+                    ❤️ 123
+                </button>
+                <button class="comment-button">
+                    💬 45
+                </button>
+                <button class="share-button">
+                    🔗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التعليقات -->
+    <div class="comments-section">
+        <div class="comment">
+            <strong>mohamed-twets:</strong>
+            <p>تفو عليك .</p>
+        </div>
+        <div class="comment">
+            <strong>مريم:</strong>
+            <p>هههههههههههه</p>
+        </div>
+
+        <form class="comment-form">
+            <input type="text" placeholder="أضف تعليقك..." class="comment-input">
+            <button type="submit" class="comment-submit">إرسال</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
