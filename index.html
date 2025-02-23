@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول | TikTok </title>
+    <title>تسجيل الدخول | TikTok</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="login-container">
-        <h2> تسجيل الدخول الى TikTok</h2>
+        <div class="tiktok-logo">TikTok</div>
         <form id="loginForm">
-    <input type="email" id="email" name="email" required placeholder="البريد الالكتروني" />
-    <input type="password" id="password" name="password" required placeholder="كلمة المرور" />
-    <button type="submit">تسجيل الدخول</button>
-</form>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <div class="register-link">
+            ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a>
+        </div>
     </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
