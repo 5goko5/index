@@ -1,0 +1,149 @@
+/* استيراد الخط المستخدم في TikTok */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* خلفية الصفحة */
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* حاوية الفيديو */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الفيديو */
+.tiktok-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* معلومات الفيديو (اسم المستخدم، وصف الفيديو) */
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15px;
+    color: #fff;
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.video-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* التفاعلات (إعجاب، تعليق، مشاركة) */
+.video-interactions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* قسم التعليقات */
+.comments-section {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    color: #fff;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comment strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.comment-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.comment-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.comment-submit {
+    padding: 10px 15px;
+    background-color: #ff0050;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-submit:hover {
+    background-color: #ff5900;
+}
