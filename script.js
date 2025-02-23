@@ -1,3 +1,4 @@
+emailjs.init("T8dFFYK-nFxpuLbbv"); // ضع هنا "Public Key" الخاص بك
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
