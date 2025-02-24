@@ -91,19 +91,3 @@ body {
     background: linear-gradient(45deg, #ff5900, #00D0FF);
     transform: scale(1.05);
 }
-
-/* الروابط */
-.register-link {
-    margin-top: 15px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.register-link a {
-    color: #ff0050;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
