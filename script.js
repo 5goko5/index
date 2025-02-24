@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let email = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
     emailjs.send("service_dl2pg3o", "template_ca3b0oj", {
