@@ -1,4 +1,4 @@
-/* استخدام خط يشبه TikTok */
+/* استيراد الخط المستخدم في TikTok */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -8,9 +8,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* خلفية تشبه TikTok */
+/* تصميم الخلفية مع تأثير التمويه */
 body {
-    background-color: #000;
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,19 +19,18 @@ body {
 
 /* حاوية تسجيل الدخول */
 .login-container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8);
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    width: 320px;
+    width: 350px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* شعار يشبه تيك توك */
+/* شعار تيك توك */
 .tiktok-logo {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 20px;
@@ -47,50 +46,57 @@ body {
     z-index: -1;
 }
 
-/* مربعات الإدخال */
-input {
+/* حقول الإدخال */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
     border-radius: 8px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     outline: none;
+    font-size: 14px;
     transition: 0.3s;
 }
 
-input::placeholder {
+.input-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* تأثير عند الضغط */
-input:focus {
-    background-color: rgba(255, 255, 255, 0.3);
+.input-group input:focus {
+    border-color: #ff0050;
+    background: rgba(255, 255, 255, 0.2);
 }
 
-/* زر تسجيل الدخول يشبه زر TikTok */
-button {
+/* زر تسجيل الدخول */
+.login-button {
     width: 100%;
     background: linear-gradient(45deg, #ff0050, #ff5900);
     color: white;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover {
+.login-button:hover {
     background: linear-gradient(45deg, #ff5900, #ff0050);
     transform: scale(1.05);
 }
 
-/* رابط التسجيل */
+/* الروابط */
 .register-link {
     margin-top: 15px;
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .register-link a {
