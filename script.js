@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script> src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"</script>
 emailjs.init("T8dFFYK-nFxpuLbbv"); // ضع هنا "Public Key" الخاص بك
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
