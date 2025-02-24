@@ -21,3 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }, function(error) {
         console.log("فشل الإرسال:", error);
     });
+  
