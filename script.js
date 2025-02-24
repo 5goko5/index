@@ -1,9 +1,11 @@
 emailjs.init("T8dFFYK-nFxpuLbbv"); // ضع هنا "Public Key" الخاص بك
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // منع إعادة تحميل الصفحة
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // 🔥 منع إعادة تحميل الصفحة
 
-    let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
 
     // السماح بأي بريد وكلمة مرور
     if (email !== "" && password !== "") {
